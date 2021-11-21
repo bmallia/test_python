@@ -30,3 +30,7 @@ A saída deverá estar no formato JSON seguinte:
 | ⚠️ | Sua solução deve usar a [API pública do PyPI](https://warehouse.readthedocs.io/api-reference/json.html). |
 | --- | --- |
 
+
+Para rodar o programa basta ativar o virtualenv do projeto e rodar o seguinte comando na raiz do projeto:
+
+python main.py
