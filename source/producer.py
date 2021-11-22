@@ -11,6 +11,10 @@ class Producer:
 
         if res.status_code == 200:
             project['latestVersion'] =  res.json()['info']['version']
+
+            if project['currentVersion'] == 'standard':
+                project['currentVersion'] = project['latestVersion']
+
             if project['latestVersion'] == project['currentVersion']:
                 project['outOfDate'] = 'false'
             else:

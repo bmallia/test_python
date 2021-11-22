@@ -18,9 +18,9 @@ class Reader:
         """  Lê um projeto com nome e versão e retorna  uma lista formatada"""
         if not self.re_specific_version.match(project):
             if self.re_standard_version.match(project):
-               project =  project.replace("[standard]", "== 0.0.0")
+               project =  project.replace("[standard]", "== standard")
             else:
-                project = project + "== 0.0.0" 
+                project = project + "== standard" 
         
         return project.replace('\n', '').replace("==", ",").replace(">=", ",").split(",")
 
